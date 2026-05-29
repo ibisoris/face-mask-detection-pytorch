@@ -12,6 +12,7 @@ logs/
 .vscode/
 
 models/*.pth
+!models/mask_detector.pth
 models/*.pt
 
 .DS_Store

@@ -129,6 +129,35 @@ The app lets you upload an image, displays the image, and predicts:
 
 It also shows a confidence score and progress bar.
 
+## Deploy on Streamlit Community Cloud
+
+This app can be deployed for free with Streamlit Community Cloud.
+
+Before deploying, make sure the GitHub repository includes:
+
+- `app/app.py`
+- `requirements.txt`
+- `.streamlit/config.toml`
+- `models/mask_detector.pth`
+
+Deployment steps:
+
+1. Push this project to GitHub.
+2. Go to [Streamlit Community Cloud](https://streamlit.io/cloud).
+3. Sign in with GitHub.
+4. Click **Create app** or **New app**.
+5. Choose this repository.
+6. Set the branch to `main`.
+7. Set the main file path to:
+
+```text
+app/app.py
+```
+
+8. Click **Deploy**.
+
+After deployment, Streamlit will install the packages from `requirements.txt`, load the trained model from `models/mask_detector.pth`, and give you a public app URL.
+
 ## Screenshots
 
 ### App Home
@@ -151,6 +180,8 @@ It also shows a confidence score and progress bar.
 
 ```text
 face-mask-detection-pytorch/
+  .streamlit/
+    config.toml
   app/
     app.py
   data/
